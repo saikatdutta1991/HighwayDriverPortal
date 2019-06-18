@@ -1,0 +1,31 @@
+.bg-login-image {
+    background: url("/assets/images/login_back.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background: url("/assets/images/login_background.png");
+    max-width: inherit;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    padding: 0;
+}
+
+.navbar {
+    background: transparent;
+    position: absolute;
+}
+
+@media only screen and (min-width: 992px) {
+    .card {
+        width: 65%;
+    }
+} 

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	production: false,
+	websiteName : 'Byroad',
+	host : 'https://highway.capefox.in',
+	apiEndpoint : 'https://highway.capefox.in/api/v1'
 };
 
 /*
