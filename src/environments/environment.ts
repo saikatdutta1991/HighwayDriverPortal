@@ -2,7 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-let apiEndpointBase = 'https://highway.capefox.in/api/v1/driver';
+let apiEndpointBase = 'https://byroad.capefox.in/api/v1/driver';
 let apiEndpoints = {
 	login : apiEndpointBase + '/login'
 };
@@ -10,7 +10,7 @@ let apiEndpoints = {
 export const environment = {
 	production: false,
 	websiteName : 'Byroad',
-	host : 'https://highway.capefox.in',
+	host : 'https://byroad.capefox.in',
 	apiEndpoints : apiEndpoints
 };
 
