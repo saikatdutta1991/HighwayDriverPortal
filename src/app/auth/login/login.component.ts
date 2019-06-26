@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
 
 	private isLoginOnProgress: boolean = false;
 
+	private isEyeOpen: boolean = false;
+
 	constructor(private title: Title, private notifier:NotifierService, private auth: AuthService) {
 		this.host = environment.host;
 		this.websitename = environment.websiteName;
@@ -93,6 +95,12 @@ export class LoginComponent implements OnInit {
 
 	telInputObject(obj) {
 		this.telInputObj = obj;
+	}
+
+
+
+	public toggleEye() {
+		this.isEyeOpen = !this.isEyeOpen;
 	}
 
 	

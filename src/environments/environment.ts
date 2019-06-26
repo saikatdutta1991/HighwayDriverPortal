@@ -5,7 +5,11 @@
 let host = 'https://byroad.capefox.in';
 let apiEndpointBase = host + '/api/v1/driver';
 let apiEndpoints = {
-	login : apiEndpointBase + '/login'
+	login : apiEndpointBase + '/login',
+	dashboard : apiEndpointBase + '/dashboard-details',
+	logout : apiEndpointBase + '/logout',
+	payouts : apiEndpointBase + '/payouts',
+	driverAccount : apiEndpointBase + '/account'
 };
 
 export const environment = {

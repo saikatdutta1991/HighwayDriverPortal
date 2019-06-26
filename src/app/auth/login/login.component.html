@@ -24,8 +24,10 @@
                                     (intlTelInputObject)="telInputObject($event)"
                                     name="mobile"/>
                             </div>
-                            <div class="form-group">
-                                <input type="password" required class="form-control form-control-user" placeholder="Enter Password" autocomplete="new-password" name="password" [(ngModel)]="password">
+                            <div class="form-group" style="position: relative;">
+                                <input type="{{ isEyeOpen ? 'text' : 'password' }}" required class="form-control form-control-user" placeholder="Enter Password" autocomplete="off" name="password" [(ngModel)]="password">
+                                <i class="fa fa-eye password-icon-btn" *ngIf="!isEyeOpen" (click)="toggleEye()"></i>
+                                <i class="fa fa-eye-slash password-icon-btn" *ngIf="isEyeOpen" (click)="toggleEye()"></i>
                             </div>
                             <button type="submit" (click)="onLoginSubmit()" class="btn btn-primary btn-user btn-block login-btn">
                                 <div class="spinner-border text-light btn-spinner" *ngIf="isLoginOnProgress"></div>

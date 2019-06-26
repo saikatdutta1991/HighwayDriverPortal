@@ -56,3 +56,10 @@ input[type="number"] {
     right: 5px;
     top: 5px;
 }
+
+.password-icon-btn {
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    font-size: 21px;
+}

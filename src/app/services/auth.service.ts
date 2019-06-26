@@ -36,7 +36,7 @@ export class AuthService {
 
 	/** save login data in local storage */
 	public saveLoginData(data: any) {
-		this.saveAccessToken(data.access_token);
+		this.saveAccessToken(data.accesss_token);
 		localStorage.setItem('user_info', JSON.stringify(data.driver));
 		localStorage.setItem('currency_symbol', data.currency_symbol);
 	}
