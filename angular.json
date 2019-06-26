@@ -38,7 +38,6 @@
 							"src/assets/js/jquery.min.js",
 							"src/assets/js/bootstrap.bundle.min.js",
 							"src/assets/js/jquery.easing.min.js",
-							"src/assets/js/sb-admin-2.min.js",
 							"node_modules/intl-tel-input/build/js/intlTelInput.min.js",
     						"node_modules/intl-tel-input/build/js/utils.js"
 						]

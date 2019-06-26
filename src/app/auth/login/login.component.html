@@ -16,6 +16,7 @@
                         <form class="user">
                             <div class="form-group">
                                 <input type="number"
+                                    required
                                     ng2TelInput
                                     [ng2TelInputOptions]="{initialCountry: 'in'}" 
                                     placeholder="Registered Mobile Number" 
@@ -24,9 +25,12 @@
                                     name="mobile"/>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user" placeholder="Enter Password" name="password" [(ngModel)]="password">
+                                <input type="password" required class="form-control form-control-user" placeholder="Enter Password" autocomplete="new-password" name="password" [(ngModel)]="password">
                             </div>
-                            <button (click)="onLoginSubmit()" class="btn btn-primary btn-user btn-block">Login</button>
+                            <button type="submit" (click)="onLoginSubmit()" class="btn btn-primary btn-user btn-block login-btn">
+                                <div class="spinner-border text-light btn-spinner" *ngIf="isLoginOnProgress"></div>
+                                Login
+                            </button>
                         </form>
                         <!-- <hr> -->
                         <br><br>

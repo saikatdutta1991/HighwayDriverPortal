@@ -24,7 +24,7 @@ import { AppComponent } from './app.component';
 				  }
 			},
 			behaviour: {
-				autoHide: 1000 * 60 * 60,
+				autoHide: 3000,
 				onMouseover: 'pauseAutoHide',
 				showDismissButton: true
 			}
