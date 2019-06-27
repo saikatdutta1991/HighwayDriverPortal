@@ -8,8 +8,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-	private drivername: string; 
-	private driverphotourl: string;
+	public drivername: string; 
+	public driverphotourl: string;
 
 	constructor(private auth: AuthService) { }
 

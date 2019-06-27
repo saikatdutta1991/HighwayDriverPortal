@@ -9,11 +9,11 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class PayoutsComponent implements OnInit {
 
-	private currencySymbol: string;
-	private payoutRecords: Array<any> = [];
-	private payoutRecordsLoading: boolean = true;
-	private payoutRecorsHasMore: boolean = true;
-	private payoutRecorsNextUrl: string = '';
+	public currencySymbol: string;
+	public payoutRecords: Array<any> = [];
+	public payoutRecordsLoading: boolean = true;
+	public payoutRecorsHasMore: boolean = true;
+	public payoutRecorsNextUrl: string = '';
 
 	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
 

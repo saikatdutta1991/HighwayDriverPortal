@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class FooterComponent implements OnInit {
 
-	private footerText: string;
+	public footerText: string;
 
 	constructor() { }
 

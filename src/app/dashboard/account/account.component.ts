@@ -9,12 +9,12 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AccountComponent implements OnInit {
 
-	private currencySymbol: string;
-	private accountBalance:string = '';
-	private transactionRecords: Array<any> = [];
-	private transactionRecordsLoading: boolean = true;
-	private transactionRecorsHasMore: boolean = true;
-	private transactionRecorsNextUrl: string = '';
+	public currencySymbol: string;
+	public accountBalance:string = '';
+	public transactionRecords: Array<any> = [];
+	public transactionRecordsLoading: boolean = true;
+	public transactionRecorsHasMore: boolean = true;
+	public transactionRecorsNextUrl: string = '';
 
 	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
 

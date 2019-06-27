@@ -9,8 +9,8 @@ declare var $;
 })
 export class SidebarComponent implements OnInit {
 
-	private headerText: string;
-	private logo: string;
+	public headerText: string;
+	public logo: string;
 
 	constructor() { }
 

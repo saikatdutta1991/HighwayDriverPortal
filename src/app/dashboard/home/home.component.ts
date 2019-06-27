@@ -10,9 +10,9 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-	private dashboarddata: any = {};
-	private bankinfo:any = {};
-	private currencySymbol: string;
+	public dashboarddata: any = {};
+	public bankinfo:any = {};
+	public currencySymbol: string;
 
 	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
 

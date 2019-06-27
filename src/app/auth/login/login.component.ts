@@ -14,15 +14,15 @@ import { AuthService } from 'src/app/services/auth.service';
 
 export class LoginComponent implements OnInit {
 
-	private host: string;
-	private websitename: string;
+	public host: string;
+	public websitename: string;
 
-	private telInputObj:any;
-	private password: string;
+	public telInputObj:any;
+	public password: string;
 
-	private isLoginOnProgress: boolean = false;
+	public isLoginOnProgress: boolean = false;
 
-	private isEyeOpen: boolean = false;
+	public isEyeOpen: boolean = false;
 
 	constructor(private title: Title, private notifier:NotifierService, private auth: AuthService) {
 		this.host = environment.host;
