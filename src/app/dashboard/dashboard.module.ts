@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { StarRatingModule } from 'angular-star-rating';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,7 @@ import { AccountComponent } from './account/account.component';
 	declarations: [HomeComponent, MasterComponent, SidebarComponent, NavbarComponent, FooterComponent, PayoutsComponent, AccountComponent],
 	imports: [
 		CommonModule,
+		StarRatingModule.forRoot(),
 		DashboardRoutingModule
 	]
 })

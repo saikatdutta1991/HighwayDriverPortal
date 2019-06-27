@@ -168,6 +168,13 @@
 							<td class="text-gray-900">Service</td>
 							<td>{{userData.service_name}}</td>
 						</tr>
+						<tr>
+							<td class="text-gray-900">Your Rating</td>
+							<td>
+								<star-rating [starType]="'svg'" [rating]="userData.rating" style="display: inline-block;"></star-rating>
+								<span style="vertical-align: inherit;">{{userData.rating}}</span>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
