@@ -1,0 +1,57 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+	<h1 class="h3 mb-0 text-gray-800">Payouts</h1>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="card shadow mb-4">
+			<!-- Card Header - Dropdown -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">City Ride, Trips, Cancellation Charges</h6>
+			</div>
+			<!-- Card Body -->
+			<div class="card-body table-responsive">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th class="text-gray-900">From - To</th>
+							<th class="text-gray-900">Ride Type</th>
+							<th class="text-gray-900">Ride Cost</th>
+							<th class="text-gray-900">Tax</th>
+							<th class="text-gray-900">Admin Commission</th>
+							<th class="text-gray-900">Your Earnings</th>
+							<th class="text-gray-900"> Cancellation Charge</th>
+							<th class="text-gray-900">Date</th>
+						</tr>
+					</thead>
+					<tbody>
+					  <tr *ngFor="let record of payoutRecords">
+						<td class="text-gray-900">
+							<span>
+									<i class="fa fa-circle text-success" style="font-size: 10px;"></i>
+									{{ record.from.split(', ').slice(0, 3).join(', ') }}
+							</span>
+							<br>
+							<span>
+									<i class="fa fa-dot-circle text-danger" style="font-size: 10px;"></i>
+									{{ record.to.split(', ').slice(0, 3).join(', ') }}
+							</span>
+						</td>
+						<!-- <td class="text-gray-700">{{ record.to.split(', ').slice(0, 1) }}</td> -->
+						<td class="text-gray-900">{{record.ride_type.charAt(0).toUpperCase() + record.ride_type.slice(1)}}</td>
+						<td class="text-gray-900">{{currencySymbol}}{{record.ride_cost}}</td>
+						<td class="text-gray-900">{{currencySymbol}}{{record.tax}}</td>
+						<td class="text-gray-900">{{currencySymbol}}{{record.admin_commisssion}}</td>
+						<td class="text-gray-900">{{currencySymbol}}{{record.driver_earnings}}</td>
+						<td class="text-gray-900">{{currencySymbol}}{{record.cancellation_charge}}</td>
+						<td class="text-gray-900">{{record.date}}</td>
+					  </tr>
+					</tbody>
+				</table>
+				<div class="spinner-container text-center pb-3">
+					<div class="spinner-border text-primary" *ngIf="payoutRecordsLoading"></div>
+					<i class="fa fa-chevron-circle-down text-primary" style="font-size: 2rem;cursor: pointer;" title="Load More" *ngIf="payoutRecorsHasMore && !payoutRecordsLoading" (click)="fetchPayouts()"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

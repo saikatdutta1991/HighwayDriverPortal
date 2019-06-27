@@ -1,0 +1,55 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+	<h1 class="h3 mb-0 text-gray-800">Account</h1>
+</div>
+<div class="row">
+		<div class="col-md-12">
+			<div class="card shadow mb-4">
+				<!-- <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+					<h6 class="m-0 font-weight-bold text-primary">Account History</h6>
+				</div> -->
+				<!-- Card Body -->
+				<div class="card-body bg-gradient-primary text-center text-white">
+					<h4>Your Account Balance</h4>
+					<h1>{{currencySymbol}}{{accountBalance}}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="card shadow mb-4">
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">Account History</h6>
+			</div>
+			<div class="card-body table-responsive">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th class="text-gray-900">Transaction Id</th>
+							<th class="text-gray-900">Amount</th>
+							<th class="text-gray-900">Closing Amount</th>
+							<th class="text-gray-900">Remarks</th>
+							<th class="text-gray-900">Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let record of transactionRecords">
+							<td class="text-gray-900">{{record.trans_id}}</td>
+							<td class="text-gray-900">{{currencySymbol}}{{record.amount}}</td>
+							<td class="text-gray-900">{{currencySymbol}}{{record.closing_amount}}</td>
+							<td class="text-gray-900">{{record.remarks}}</td>
+							<td class="text-gray-900">{{record.date}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="spinner-container text-center pb-3">
+					<div class="spinner-border text-primary" *ngIf="transactionRecordsLoading"></div>
+					<i class="fa fa-chevron-circle-down text-primary" style="font-size: 2rem;cursor: pointer;"
+						title="Load More" *ngIf="transactionRecorsHasMore && !transactionRecordsLoading"
+						(click)="fetchAccountDetails()"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

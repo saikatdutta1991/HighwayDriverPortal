@@ -9,16 +9,23 @@
 	<!-- Divider -->
 	<!-- <hr class="sidebar-divider my-0"> -->
 	<!-- Nav Item - Dashboard -->
-	<li class="nav-item active">
+	<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 		<a class="nav-link" routerLink="/">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span></a>
 	</li>
 	<hr class="sidebar-divider my-0">
-	<li class="nav-item active">
-		<a class="nav-link" routerLink="/">
+	<li class="nav-item" routerLinkActive="active">
+		<a class="nav-link" routerLink="/payouts">
 			<i class="fab fa-amazon-pay"></i>
 			<span>Payouts</span></a>
+	</li>
+	<hr class="sidebar-divider my-0">
+	<hr class="sidebar-divider my-0">
+	<li class="nav-item" routerLinkActive="active">
+		<a class="nav-link" routerLink="/account">
+			<i class="fas fa-piggy-bank"></i>
+			<span>Account</span></a>
 	</li>
 	<hr class="sidebar-divider my-0">
 	<!-- Divider -->

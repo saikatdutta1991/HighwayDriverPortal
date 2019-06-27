@@ -7,9 +7,11 @@ import { MasterComponent } from './layouts/master/master.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { PayoutsComponent } from './payouts/payouts.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
-	declarations: [HomeComponent, MasterComponent, SidebarComponent, NavbarComponent, FooterComponent],
+	declarations: [HomeComponent, MasterComponent, SidebarComponent, NavbarComponent, FooterComponent, PayoutsComponent, AccountComponent],
 	imports: [
 		CommonModule,
 		DashboardRoutingModule
