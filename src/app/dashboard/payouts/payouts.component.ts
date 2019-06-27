@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
 	selector: 'app-payouts',
@@ -15,9 +16,10 @@ export class PayoutsComponent implements OnInit {
 	public payoutRecorsHasMore: boolean = true;
 	public payoutRecorsNextUrl: string = '';
 
-	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
+	constructor(private dashboardService: DashboardService, private auth: AuthService, private data: DataService) { }
 
 	ngOnInit() {
+		this.data.setHeaderText('Payouts');
 		this.currencySymbol = this.auth.getCurrencySymbol(); //set currency symbol
 	}
 

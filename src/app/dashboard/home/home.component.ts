@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { AuthService } from 'src/app/services/auth.service';
-
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
 	selector: 'app-home',
@@ -14,9 +14,10 @@ export class HomeComponent implements OnInit {
 	public bankinfo:any = {};
 	public currencySymbol: string;
 
-	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
+	constructor(private dashboardService: DashboardService, private auth: AuthService, private data: DataService) { }
 
 	ngOnInit() {
+		this.data.setHeaderText('Dashboard');
 		this.currencySymbol = this.auth.getCurrencySymbol(); //set currency symbol
 	}
 

@@ -18,4 +18,9 @@ export class MasterComponent implements OnInit {
 		this.auth.doLogout();
 	}
 
+	/** logout from all devices */
+	public doLogoutFromAllDevices() {
+		this.auth.doLogout(true);	
+	}
+
 }

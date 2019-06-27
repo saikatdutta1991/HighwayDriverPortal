@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/app/services/dashboard.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
 	selector: 'app-account',
@@ -16,9 +17,10 @@ export class AccountComponent implements OnInit {
 	public transactionRecorsHasMore: boolean = true;
 	public transactionRecorsNextUrl: string = '';
 
-	constructor(private dashboardService: DashboardService, private auth: AuthService) { }
+	constructor(private dashboardService: DashboardService, private auth: AuthService, private data: DataService) { }
 
 	ngOnInit() {
+		this.data.setHeaderText('Account');
 		this.currencySymbol = this.auth.getCurrencySymbol(); //set currency symbol
 	}
 

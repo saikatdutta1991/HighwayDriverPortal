@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Router, Route } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { NotifierService } from 'angular-notifier';
 
 
@@ -101,7 +101,20 @@ export class AuthService {
 	/**
 	 * logout user and redirect to login page
 	 */
-	public doLogout():void {
+	public doLogout(alldevice:boolean = false) {
+
+		let apiEndpoint = alldevice ? environment.apiEndpoints.logout + '?logout_all_devices=true' : environment.apiEndpoints.logout;
+		const httpOptions = {
+			headers: new HttpHeaders({
+				'Authorization': this.getAccessToken()
+			})
+		}
+
+		this.http.get(apiEndpoint, httpOptions).subscribe( (response) => {
+			console.log('logout', response);
+		}, () => {});
+
+
 		this.removeLoginData();
 		this.router.navigate(['auth/login']);
 	}

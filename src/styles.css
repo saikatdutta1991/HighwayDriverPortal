@@ -9,3 +9,7 @@
     color: white;
     background: transparent;
 }
+
+#wrapper {
+    min-height: 100vh;
+}
