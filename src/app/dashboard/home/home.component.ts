@@ -13,11 +13,14 @@ export class HomeComponent implements OnInit {
 	public dashboarddata: any = {};
 	public bankinfo:any = {};
 	public currencySymbol: string;
+	public userData: any;
 
 	constructor(private dashboardService: DashboardService, private auth: AuthService, private data: DataService) { }
 
 	ngOnInit() {
 		this.data.setHeaderText('Dashboard');
+		this.userData = this.auth.getUserData();
+		console.log(this.userData);
 		this.currencySymbol = this.auth.getCurrencySymbol(); //set currency symbol
 	}
 
