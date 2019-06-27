@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
     "angular-notifier": "^4.1.1",
+    "angular-star-rating": "^4.0.0-beta.3",
+    "css-star-rating": "^1.2.4",
     "intl-tel-input": "^16.0.0",
     "ng2-tel-input": "^2.0.1",
     "rxjs": "~6.4.0",
