@@ -103,5 +103,11 @@ export class LoginComponent implements OnInit {
 		this.isEyeOpen = !this.isEyeOpen;
 	}
 
+
+	onMobileInputKeydown(event) {
+		console.log( event.target.value.replace(/[^0-9]/g, "") )
+		this.telInputObj.setNumber(event.target.value.replace(/[^0-9]/g, ""))
+	}
+
 	
 }
